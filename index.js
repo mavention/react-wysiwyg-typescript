@@ -113,7 +113,7 @@ var Draft = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Draft.prototype.render = function () {
-        return React.createElement(react_draft_wysiwyg_1.Editor, __assign({ wrapperClassName: "react-wysiwyg-typescript-wrapper", editorClassName: "react-wysiwyg-typescript-editor", toolbarClassName: "react-wysiwyg-typescript-toolbar", placeholder: "", toolbar: this.props.toolbar, locale: this.props.locale }, this.props));
+        return React.createElement(react_draft_wysiwyg_1.Editor, __assign({ wrapperClassName: "react-wysiwyg-typescript-wrapper", editorClassName: "react-wysiwyg-typescript-editor", toolbarClassName: "react-wysiwyg-typescript-toolbar", placeholder: "", stripPastedStyles: this.props.stripPastedStyles, toolbar: this.props.toolbar, locale: this.props.locale }, this.props));
     };
     Draft.defaultProps = {
         toolbar: {
@@ -128,7 +128,8 @@ var Draft = /** @class */ (function (_super) {
                 options: ['unordered', 'ordered']
             }
         },
-        locale: 'en'
+        locale: 'en',
+        stripPastedStyles: false
     };
     return Draft;
 }(React.Component));

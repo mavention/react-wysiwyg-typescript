@@ -63,6 +63,7 @@ export interface DraftProps {
      */
     onEditorStateChange?: (editorState: EditorState) => void;
     placeholder?: string;
+    stripPastedStyles?: boolean;
     /**
      * tool bar configrations
      *
